@@ -5,23 +5,25 @@
 	<key>BuildMachineOSBuild</key>
 	<string>22C65</string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
+	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>spectrumlib</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.neurotech.spectrumlib</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>spectrumlib</string>
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
-	<key>CSResourcesFileMapped</key>
-	<true/>
+	<key>CFBundleVersion</key>
+	<string>1.0.0</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -39,6 +41,6 @@
 	<key>DTXcodeBuild</key>
 	<string>14E300c</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>13.1</string>
+	<string>10.14</string>
 </dict>
 </plist>
