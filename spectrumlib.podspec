@@ -12,5 +12,5 @@ Pod::Spec.new do |spec|
   spec.ios.vendored_frameworks = 'ios/spectrumlib.xcframework'
 
   spec.osx.vendored_libraries = 'macos/libspectrumlib.dylib'
-  spec.osx.source_files = 'maacos/Headers/*.h'
+  spec.osx.source_files = 'macos/Headers/*.h'
 end
