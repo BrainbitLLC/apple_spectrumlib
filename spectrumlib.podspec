@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "spectrumlib"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "Mathematical library for calculating the EEG signal spectrum."
   spec.homepage     = "https://gitlab.com/neurosdk2/neurosamples"
   spec.license      = { :type => 'MIT' } 

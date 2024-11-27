@@ -3,10 +3,13 @@
 
 #import <Foundation/Foundation.h>
 #import <Foundation/NSArray.h>
+#include "common_api_spect.h"
 #include "SMWavesSpectrumData.h"
 #include "SMRawSpectrumData.h"
 
-@interface SMSpectrumMath : NSObject
+@interface SMSpectrumMath : NSObject{
+    SpectrumMath* math; 
+}
 
 -(id)  initWithSampleRate :(int) sampl_rate andFftWindow: (int) fft_window andProcessWinFreq: (int) process_win_freq;
 -(void) initParamsWithUpBorderFreq:(int) up_border_frequency andNormilize: (bool) normalize_spect_by_bandwidth;
@@ -19,6 +22,7 @@
 -(double)  getFFTBinsFor1Hz;
 -(SMRawSpectrumData*) readRawSpectrumInfo;
 -(SMWavesSpectrumData*) readWavesSpectrumInfo;
+-(uint32_t)  readSpectrumArrSize;
 -(NSArray<SMRawSpectrumData*>*) readRawSpectrumInfoArr;
 -(NSArray<SMWavesSpectrumData*>*) readWavesSpectrumInfoArr;
 -(void) setNewSampleSize;

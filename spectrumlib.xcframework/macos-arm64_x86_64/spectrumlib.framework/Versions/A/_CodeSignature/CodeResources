@@ -4,41 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/SMHelpers.h</key>
+		<key>Resources/Info.plist</key>
 		<data>
-		lUMuRTHZvCgIsYHy/xb1GaR1Tlo=
-		</data>
-		<key>Headers/SMRawSpectrumData.h</key>
-		<data>
-		rAcdwj2kZaLhf8bl614XpHNToTc=
-		</data>
-		<key>Headers/SMSpectrumMath.h</key>
-		<data>
-		tcJHhwPUBGtkD7Jqh5ppUys5t8o=
-		</data>
-		<key>Headers/SMSpectrumModuleExport.h</key>
-		<data>
-		bAUbUVbUBh6XwGFUDDwJHACYTS8=
-		</data>
-		<key>Headers/SMWavesSpectrumData.h</key>
-		<data>
-		AUF/pcP3EYgq+//taZUNInWtFMA=
-		</data>
-		<key>Headers/common_api_spect.h</key>
-		<data>
-		v+UKiG9YsYD6XAaypN44TP9dPqo=
-		</data>
-		<key>Headers/lib_export.h</key>
-		<data>
-		5/YbB5XpNKuF9iaUx11zUVxd8JI=
-		</data>
-		<key>Info.plist</key>
-		<data>
-		ELVEX0qN8k2PD+PUbYkDKzOLv8E=
-		</data>
-		<key>Modules/module.modulemap</key>
-		<data>
-		dp+qHqkFlEKceRPpYZQXKAYWTSs=
+		ektfr7j+eQONpwuWiiK0i8ciDDE=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -99,26 +67,33 @@
 			IydNLgKHKRs4XHZcvkZAaAeLYV+XzxVpnDzMnsI5+iw=
 			</data>
 		</dict>
+		<key>Resources/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			j7RnI2MFoxhEzB9VlFMXa09L4rIir600A2/O7exls7Y=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^.*</key>
+		<key>^Resources/</key>
 		<true/>
-		<key>^.*\.lproj/</key>
+		<key>^Resources/.*\.lproj/</key>
 		<dict>
 			<key>optional</key>
 			<true/>
 			<key>weight</key>
 			<real>1000</real>
 		</dict>
-		<key>^.*\.lproj/locversion.plist$</key>
+		<key>^Resources/.*\.lproj/locversion.plist$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
 		</dict>
-		<key>^Base\.lproj/</key>
+		<key>^Resources/Base\.lproj/</key>
 		<dict>
 			<key>weight</key>
 			<real>1010</real>
@@ -140,27 +115,15 @@
 			<key>weight</key>
 			<real>2000</real>
 		</dict>
+		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
+		<dict>
+			<key>nested</key>
+			<true/>
+			<key>weight</key>
+			<real>10</real>
+		</dict>
 		<key>^.*</key>
 		<true/>
-		<key>^.*\.lproj/</key>
-		<dict>
-			<key>optional</key>
-			<true/>
-			<key>weight</key>
-			<real>1000</real>
-		</dict>
-		<key>^.*\.lproj/locversion.plist$</key>
-		<dict>
-			<key>omit</key>
-			<true/>
-			<key>weight</key>
-			<real>1100</real>
-		</dict>
-		<key>^Base\.lproj/</key>
-		<dict>
-			<key>weight</key>
-			<real>1010</real>
-		</dict>
 		<key>^Info\.plist$</key>
 		<dict>
 			<key>omit</key>
@@ -174,6 +137,37 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
+		</dict>
+		<key>^Resources/</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^Resources/.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^Resources/.*\.lproj/locversion.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>1100</real>
+		</dict>
+		<key>^Resources/Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
+		<key>^[^/]+$</key>
+		<dict>
+			<key>nested</key>
+			<true/>
+			<key>weight</key>
+			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

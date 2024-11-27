@@ -26,17 +26,19 @@ extern "C"
 	SDK_SHARED void freeSpectrumMath(SpectrumMath*);
 
 	SDK_SHARED void SpectrumMathInitParams(SpectrumMath* spectrumMathPtr, int up_border_frequency, bool normalize_spect_by_bandwidth);
+	SDK_SHARED void SpectrumMathSetFFTWinLengthAndProccessFreq(SpectrumMath* spectrumMathPtr, int fft_win_length, int process_win_freq);
 	SDK_SHARED void SpectrumMathSetWavesCoeffs(SpectrumMath* spectrumMathPtr, double d_coef, double t_coef, double a_coef, double b_coef, double g_coef);
 	SDK_SHARED void SpectrumMathSetHanningWinSpect(SpectrumMath* spectrumMathPtr);
 	SDK_SHARED void SpectrumMathSetHammingWinSpect(SpectrumMath* spectrumMathPtr);
 	SDK_SHARED void SpectrumMathSetSquaredSpect(SpectrumMath* spectrumMathPtr, bool fl);
 
-	SDK_SHARED void SpectrumMathPushData(SpectrumMath* spectrumMathPtr, const double* samples, size_t sampleCount);
+	SDK_SHARED void SpectrumMathPushData(SpectrumMath* spectrumMathPtr, double* samples, uint32_t sampleCount);
 	SDK_SHARED void SpectrumMathProcessData(SpectrumMath* spectrumMathPtr);
 
-	SDK_SHARED void SpectrumMathComputeSpectrum(SpectrumMath* spectrumMathPtr, double* vals_arr, int arr_size);
+	SDK_SHARED void SpectrumMathComputeSpectrum(SpectrumMath* spectrumMathPtr, double* vals_arr, uint32_t arr_size);
 
 	SDK_SHARED double SpectrumMathGetFFTBinsFor1Hz(SpectrumMath* spectrumMathPtr);
+	SDK_SHARED int SpectrumMathGetFFTWindow(SpectrumMath* spectrumMathPtr);
 
 	SDK_SHARED void SpectrumMathReadRawSpectrumInfo(SpectrumMath* spectrumMathPtr, RawSpectrumData* raw_spect_data);
 	SDK_SHARED void SpectrumMathReadWavesSpectrumInfo(SpectrumMath* spectrumMathPtr, WavesSpectrumData* waves_spect_data);
